@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Accrual.cs" />
+    <Compile Include="Admin.cs" />
     <Compile Include="BankAccount.cs" />
     <Compile Include="PayrollSystem.cs" />
     <Compile Include="Program.cs" />

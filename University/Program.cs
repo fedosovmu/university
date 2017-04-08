@@ -19,9 +19,8 @@ namespace University
 
             var payrollSystem = new PayrollSystem ();
 
-
-
             Application.Run(new Form());
+            
         }
     }
 }
