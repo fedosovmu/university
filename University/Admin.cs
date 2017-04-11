@@ -8,6 +8,6 @@ namespace University
 {
     class Admin : User
     {
-
-    }
+		public Admin(String login, String password) : base(login, password) { }
+	}
 }

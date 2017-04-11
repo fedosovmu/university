@@ -16,11 +16,12 @@ namespace University
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new LoginForm());
 
             var payrollSystem = new PayrollSystem ();
 
-            Application.Run(new Form());
-            
-        }
+			var loginForm = new LoginForm();
+			Application.Run(loginForm);
+		}
     }
 }

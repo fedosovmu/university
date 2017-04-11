@@ -16,7 +16,7 @@ namespace University
 
         public User(String login, String password)
         {
-            PersonalBankAccount = new BankAccount();
+			PersonalBankAccount = new BankAccount();
             Login = login;
             Password = password;
             Name = "";
