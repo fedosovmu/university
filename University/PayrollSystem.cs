@@ -24,6 +24,18 @@ namespace University
 
 
 
+		public User FindUser (String login, String password)
+		{
+			for (int i = 0; i < Users.Count; i++)
+			{
+				if (Users[i].Login == login && Users[i].CheckPassword(password))
+					return Users[i];
+			}
+			return null;
+		}
+
+
+
 		private void CreateUsers()
 		{
 			var admin = new Admin("admin", "123");

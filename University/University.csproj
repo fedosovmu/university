@@ -48,6 +48,7 @@
     <Compile Include="Accrual.cs" />
     <Compile Include="Admin.cs" />
     <Compile Include="BankAccount.cs" />
+    <Compile Include="GrapicalUserInterface.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
