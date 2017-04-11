@@ -9,8 +9,8 @@ namespace University
     class PayrollSystem
     {
         // <---- Система начисления зарплаты
-        List<User> Users;
-        List<Accrual> Accruals;
+        public List<User> Users;
+        public List<Accrual> Accruals;
 
 
 
@@ -19,7 +19,7 @@ namespace University
             Users = new List<User> ();
             Accruals = new List<Accrual> ();
 
-			CreateUsers();
+			CreateStandartUsers();
 		}
 
 
@@ -36,12 +36,16 @@ namespace University
 
 
 
-		private void CreateUsers()
+		private void CreateStandartUsers()
 		{
 			var admin = new Admin("admin", "123");
+			admin.Surname = "Федосов";
+			admin.Name = "Максим";
 			AddUser(admin);
 
 			var student = new User("student", "123");
+			student.Surname = "Еремеев";
+			student.Name = "Роман";
 			AddUser(student);
 		}
 

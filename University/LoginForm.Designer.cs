@@ -33,6 +33,7 @@
 			this.Password = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
+			this.ErrorLabel = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// Enter
@@ -57,6 +58,7 @@
 			this.Password.Name = "Password";
 			this.Password.Size = new System.Drawing.Size(144, 20);
 			this.Password.TabIndex = 2;
+			this.Password.UseSystemPasswordChar = true;
 			// 
 			// label1
 			// 
@@ -76,18 +78,31 @@
 			this.label2.TabIndex = 4;
 			this.label2.Text = "Password:";
 			// 
+			// ErrorLabel
+			// 
+			this.ErrorLabel.AutoSize = true;
+			this.ErrorLabel.ForeColor = System.Drawing.Color.Red;
+			this.ErrorLabel.Location = new System.Drawing.Point(51, 9);
+			this.ErrorLabel.Name = "ErrorLabel";
+			this.ErrorLabel.Size = new System.Drawing.Size(175, 13);
+			this.ErrorLabel.TabIndex = 5;
+			this.ErrorLabel.Text = "Неправильный логин или пароль";
+			this.ErrorLabel.Visible = false;
+			// 
 			// LoginForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(284, 159);
+			this.Controls.Add(this.ErrorLabel);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.Password);
 			this.Controls.Add(this.Login);
 			this.Controls.Add(this.Enter);
 			this.Name = "LoginForm";
-			this.Text = "LoginForm";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Text = "Login Form";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -100,5 +115,6 @@
 		public System.Windows.Forms.TextBox Password;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
+		public System.Windows.Forms.Label ErrorLabel;
 	}
 }
