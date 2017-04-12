@@ -8,7 +8,7 @@ namespace University
 {
     class BankAccount
     {
-        List<Accrual> Accruals;
+        public List<Accrual> Accruals;
         public double SumOfMoney;
 
         public BankAccount()
@@ -16,8 +16,8 @@ namespace University
             Accruals = new List<Accrual>();
             SumOfMoney = 0;
         }
-        
-        public void ProduceAccrual (Accrual accrual)
+
+		public void ProduceAccrual (Accrual accrual)
         {
             Accruals.Add(accrual);
             SumOfMoney += accrual.Sum;

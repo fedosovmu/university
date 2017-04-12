@@ -100,6 +100,7 @@
 			this.Controls.Add(this.Password);
 			this.Controls.Add(this.Login);
 			this.Controls.Add(this.Enter);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.Name = "LoginForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Login Form";

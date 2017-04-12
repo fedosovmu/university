@@ -13,6 +13,8 @@ namespace University
         private String Password;
         public String Name;
         public String Surname;
+		public String Phone;
+		public String Email;
 
         public User(String login, String password)
         {
@@ -23,7 +25,7 @@ namespace University
             Surname = "";
         }
 
-        public bool CheckPassword(String password)
+		public bool CheckPassword(String password)
         {
             return Password == password;
         }
