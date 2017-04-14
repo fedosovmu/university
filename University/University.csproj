@@ -46,13 +46,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Accrual.cs" />
-    <Compile Include="AddNewUserForm.cs">
+    <Compile Include="Users\Employee.cs" />
+    <Compile Include="Forms\AddNewUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNewUserForm.Designer.cs">
+    <Compile Include="Forms\AddNewUserForm.Designer.cs">
       <DependentUpon>AddNewUserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin.cs" />
+    <Compile Include="Users\Teacher.cs" />
+    <Compile Include="Users\Admin.cs" />
     <Compile Include="Forms\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,9 +78,9 @@
     <Compile Include="PayrollSystem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student.cs" />
-    <Compile Include="User.cs" />
-    <EmbeddedResource Include="AddNewUserForm.resx">
+    <Compile Include="Users\Student.cs" />
+    <Compile Include="Users\User.cs" />
+    <EmbeddedResource Include="Forms\AddNewUserForm.resx">
       <DependentUpon>AddNewUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForm.resx">

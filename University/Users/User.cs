@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace University
 {
-    class User
+    abstract class User
     {
         public readonly BankAccount PersonalBankAccount;
         public readonly String Login;

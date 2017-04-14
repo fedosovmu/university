@@ -36,7 +36,7 @@
 			this.SurameTextBox = new System.Windows.Forms.TextBox();
 			this.LoginTextBox = new System.Windows.Forms.TextBox();
 			this.PasswordTextBox = new System.Windows.Forms.TextBox();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.UserComboBox = new System.Windows.Forms.ComboBox();
 			this.AddButton = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
@@ -104,13 +104,13 @@
 			this.PasswordTextBox.Size = new System.Drawing.Size(100, 20);
 			this.PasswordTextBox.TabIndex = 7;
 			// 
-			// comboBox1
+			// UserComboBox
 			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(74, 118);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(100, 21);
-			this.comboBox1.TabIndex = 8;
+			this.UserComboBox.FormattingEnabled = true;
+			this.UserComboBox.Location = new System.Drawing.Point(74, 118);
+			this.UserComboBox.Name = "UserComboBox";
+			this.UserComboBox.Size = new System.Drawing.Size(100, 21);
+			this.UserComboBox.TabIndex = 8;
 			// 
 			// AddButton
 			// 
@@ -127,7 +127,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(191, 184);
 			this.Controls.Add(this.AddButton);
-			this.Controls.Add(this.comboBox1);
+			this.Controls.Add(this.UserComboBox);
 			this.Controls.Add(this.PasswordTextBox);
 			this.Controls.Add(this.LoginTextBox);
 			this.Controls.Add(this.SurameTextBox);
@@ -155,7 +155,7 @@
 		private System.Windows.Forms.TextBox SurameTextBox;
 		private System.Windows.Forms.TextBox LoginTextBox;
 		private System.Windows.Forms.TextBox PasswordTextBox;
-		private System.Windows.Forms.ComboBox comboBox1;
 		private System.Windows.Forms.Button AddButton;
+		public System.Windows.Forms.ComboBox UserComboBox;
 	}
 }

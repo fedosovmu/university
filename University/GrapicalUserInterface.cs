@@ -91,6 +91,11 @@ namespace University
 		{
 			var addUserNewUserForm = new AddNewUserForm();
 			addUserNewUserForm.Show();
+
+			addUserNewUserForm.UserComboBox.Items.Add("Сотрудник");
+			addUserNewUserForm.UserComboBox.Items.Add("Преподаватель");
+			addUserNewUserForm.UserComboBox.Items.Add("Студент");
+			addUserNewUserForm.UserComboBox.Items.Add("Администратор");
 		}
 
 
@@ -104,9 +109,18 @@ namespace University
 
 			int index = 0;
 			adminForm.UserInfoButton.Click += (sender, args) => OpenUserForm(PayrollSystem.Users[index]);
-			adminForm.UsersList.SelectedIndexChanged += (sender, args) => index = adminForm.UsersList.SelectedIndex;
+			adminForm.UserListView.SelectedIndexChanged += (sender, args) =>
+			{
+				for (int i = 0; i < PayrollSystem.Users.Count; i++)
+					if (adminForm.UserListView.SelectedIndices.Contains(i))
+						index = i;
+			};
 			adminForm.AddUserButton.Click += (sender, args) => OpenAddNewUserForm();
-			
+
+			adminForm.UserListView.Columns.Add("Логин", 80, HorizontalAlignment.Left);
+			adminForm.UserListView.Columns.Add("Имя", 80, HorizontalAlignment.Left);
+			adminForm.UserListView.Columns.Add("Фамилия", 80, HorizontalAlignment.Left);
+			adminForm.UserListView.Columns.Add("Статус", 80, HorizontalAlignment.Left);
 
 			for (int i = 0; i < PayrollSystem.Users.Count; i++)
 			{
@@ -115,13 +129,21 @@ namespace University
 				String status;
 				if (user is Admin)
 					status = "Админ";
+				else if (user is Employee)
+					status = "Сотрудник";
+				else if (user is Teacher)
+					status = "Преподаватель";
 				else if (user is Student)
 					status = "Студент";
 				else
 					status = "?";
 
-				String information = user.Login + " - " + user.Name + " - " + user.Surname + " - " + status;
-				adminForm.UsersList.Items.Add(information);
+				var item = new ListViewItem(user.Login, 0);
+				item.SubItems.Add(user.Name);
+				item.SubItems.Add(user.Surname);
+				item.SubItems.Add(status);
+
+				adminForm.UserListView.Items.Add(item);
 			}
 		}
 	}
