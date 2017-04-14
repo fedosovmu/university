@@ -38,7 +38,7 @@ namespace University
 					if (user is Admin)
 						OpenAdministratorForm();
 					else
-						OpenUserForm(user);
+						OpenUserForm(user, true);	
 					LoginForm.Hide();
 				}
 				else
@@ -58,7 +58,7 @@ namespace University
 
 
 
-		private void OpenUserForm(User user)
+		private void OpenUserForm(User user, bool active = false)
 		{
 			var userForm = new UserForm();
 			userForm.Show();
@@ -82,7 +82,8 @@ namespace University
 				userForm.AccrualListView.Items.Add(item);
 			}
 
-			userForm.FormClosed += (sender, args) => OpenLoginForm();
+			if (active)
+				userForm.FormClosed += (sender, args) => OpenLoginForm();
 		}
 
 
@@ -96,6 +97,8 @@ namespace University
 			addUserNewUserForm.UserComboBox.Items.Add("Преподаватель");
 			addUserNewUserForm.UserComboBox.Items.Add("Студент");
 			addUserNewUserForm.UserComboBox.Items.Add("Администратор");
+
+			//addUserNewUserForm.UserComboBox.AccessibleDefaultActionDescription.;
 		}
 
 
